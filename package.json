@@ -33,6 +33,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "eslint-plugin-unicorn": "^43.0.1",
+    "git-is-ready-to-push": "^0.9.0-rc.1",
     "husky": "^8.0.1",
     "prettier": "^2.6.2",
     "sort-package-json": "^1.57.0"
