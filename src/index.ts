@@ -1,4 +1,2 @@
-const bootstrap = () => {
-  console.log('test');
-};
+const bootstrap = (): void => {};
 bootstrap();

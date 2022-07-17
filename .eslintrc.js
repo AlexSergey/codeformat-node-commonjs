@@ -1,3 +1,8 @@
+const defaultEnv = 'production';
+const supportedEnvs = ['development', 'production'];
+const currentEnv = supportedEnvs.includes(process.env.NODE_ENV) ? process.env.NODE_ENV : defaultEnv;
+const isDevelopment = currentEnv === 'development';
+
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
@@ -46,42 +51,26 @@ module.exports = {
     },
   ],
   rules: {
-    'sort-keys-fix/sort-keys-fix': 'warn',
-    camelcase: ['error', { properties: 'always' }],
     'no-await-in-loop': 'off',
     'newline-before-return': 'error',
-    'no-unused-vars': [
-      'error',
-      {
-        vars: 'all',
-        args: 'after-used',
-        ignoreRestSiblings: false,
-      },
-    ],
-    'import/order': [
-      'error',
-      {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object'],
-        pathGroups: [
+    camelcase: ['error', { properties: 'always' }],
+    'no-param-reassign': 'off',
+    'class-methods-use-this': 'off',
+    'no-underscore-dangle': 'off',
+    'no-unused-vars': isDevelopment
+      ? 'off'
+      : [
+          'error',
           {
-            pattern: '@',
-            group: 'internal',
-            position: 'after',
+            vars: 'all',
+            args: 'after-used',
+            ignoreRestSiblings: false,
           },
         ],
-        'newlines-between': 'always',
-        alphabetize: {
-          order: 'asc',
-        },
-      },
-    ],
-    'no-param-reassign': 'off',
-    'import/prefer-default-export': 'off',
-    'import/no-default-export': 'error',
-    '@typescript-eslint/ban-types': 'off',
-    '@typescript-eslint/no-unused-vars': ['off'],
-    '@typescript-eslint/explicit-function-return-type': ['warn'],
-    'class-methods-use-this': 'off',
+    'no-alert': isDevelopment ? 'off' : 'error',
+    'no-console': isDevelopment ? 'off' : 'error',
+    'no-debugger': isDevelopment ? 'off' : 'error',
+
     'prettier/prettier': [
       'error',
       {
@@ -94,14 +83,11 @@ module.exports = {
         endOfLine: 'lf',
       },
     ],
-    'unicorn/filename-case': [
-      'error',
-      {
-        case: 'kebabCase',
-      },
-    ],
+
+    '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'warn',
     '@typescript-eslint/return-await': 'off',
-    'no-underscore-dangle': 'off',
     '@typescript-eslint/no-empty-interface': [
       'error',
       {
@@ -127,5 +113,42 @@ module.exports = {
         },
       },
     ],
+    '@typescript-eslint/ban-ts-comment': isDevelopment ? 'off' : 'error',
+
+    'sort-keys-fix/sort-keys-fix': 'warn',
+
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object'],
+        pathGroups: [
+          {
+            pattern: '@',
+            group: 'internal',
+            position: 'after',
+          },
+        ],
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+        },
+      },
+    ],
+    'import/prefer-default-export': 'off',
+    'import/no-default-export': 'error',
+
+    'unicorn/filename-case': [
+      'error',
+      {
+        case: 'kebabCase',
+      },
+    ],
+    'unicorn/throw-new-error': 'error',
+    'unicorn/no-instanceof-array': 'error',
+    'unicorn/prefer-node-protocol': 'error',
+    'unicorn/prefer-keyboard-event-key': 'error',
+    'unicorn/error-message': 'error',
+    'unicorn/empty-brace-spaces': 'error',
+    'unicorn/custom-error-definition': 'error',
   },
 };

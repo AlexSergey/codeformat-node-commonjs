@@ -1,38 +1,47 @@
 {
   "compilerOptions": {
+    "baseUrl": "src/",
+    "outDir": "./dist/",
+
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+
+    "module": "commonjs",
+    "target": "ES2020", // Node.js 14
+
+    "sourceMap": true,
+    "removeComments": false,
+    "resolveJsonModule": true,
+    "newLine": "lf",
+
     "lib": [
       "DOM",
       "DOM.Iterable",
       "ES2020"
     ],
+
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
     "strict": true,
     "strictPropertyInitialization": false,
-    "outDir": "./dist/",
-    "removeComments": false,
+
+    "forceConsistentCasingInFileNames": true,
     "exactOptionalPropertyTypes": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitReturns": true,
     "noImplicitOverride": true,
-    "target": "ES2020", // Node.js 14
-    "sourceMap": true,
-    "esModuleInterop": true,
     "noEmitOnError": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "preserveConstEnums": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "baseUrl": "src/",
-    "newLine": "lf"
+    "preserveConstEnums": true
   },
+
   "include": [
     "./src/**/**/*",
     "jest.e2e.config.ts",
     "jest.config.ts"
   ],
+
   "exclude": [
     "node_modules"
   ]
