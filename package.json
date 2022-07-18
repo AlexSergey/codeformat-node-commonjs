@@ -1,5 +1,5 @@
 {
-  "name": "codeformat-repo",
+  "name": "codeformat-node-commonjs",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -36,6 +36,10 @@
     "git-is-ready-to-push": "^1.0.0",
     "husky": "^8.0.1",
     "prettier": "^2.6.2",
-    "sort-package-json": "^1.57.0"
+    "sort-package-json": "^1.57.0",
+    "typescript": "^4.7.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
