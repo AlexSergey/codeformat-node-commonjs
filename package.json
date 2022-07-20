@@ -16,11 +16,11 @@
   "main": "index.js",
   "scripts": {
     "format": "npm run format:package && npm run format:prettier && npm run format:eslint",
-    "format:eslint": "eslint ./src/** --fix",
+    "format:eslint": "eslint 'src/**/*.{ts,tsx,json}' --fix",
     "format:package": "sort-package-json",
-    "format:prettier": "prettier --write \"src/**/*.ts\"",
+    "format:prettier": "prettier --write 'src/**/*.{ts,tsx,json}'",
     "lint": "npm run lint:ts && npm run lint:code",
-    "lint:code": "eslint ./src/**",
+    "lint:code": "eslint 'src/**/*.{ts,tsx,json}'",
     "lint:ts": "tsc --noEmit",
     "prepare": "husky install"
   },

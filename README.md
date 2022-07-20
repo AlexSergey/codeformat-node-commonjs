@@ -35,6 +35,28 @@ We can set up our IDE to fix all lint rules and format code by Prettier.
 
 #### Configuration setup
 
+1. Setup recommended extensions:
+
+```shell
+mkdir .vscode && touch .vscode/extensions.json
+```
+
+```json
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "streetsidesoftware.code-spell-checker",
+    "aaron-bond.better-comments",
+    "yzhang.markdown-all-in-one",
+    "gruntfuggly.todo-tree",
+    "humao.rest-client"
+  ]
+}
+```
+
+2. Setup VSCode settings:
+
 ```shell
 mkdir .vscode && touch .vscode/settings.json
 ```
@@ -44,25 +66,20 @@ Then add settings:
 ```json
 {
   "editor.formatOnSave": true,
-  "eslint.autoFixOnSave": true,
-  "eslint.validate": [
-    {
-      "language": "javascript",
-      "autoFix": true
-    },
-    {
-      "language": "javascriptreact",
-      "autoFix": true
-    },
-    {
-      "language": "typescript",
-      "autoFix": true
-    },
-    {
-      "language": "typescriptreact",
-      "autoFix": true
-    }
-  ],
-  "tslint.enable": false
+  "editor.tabSize": 2,
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "files.autoSave": "onWindowChange",
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.eol": "\n",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "tslint.enable": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
 ```

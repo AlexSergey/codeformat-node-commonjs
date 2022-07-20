@@ -98,19 +98,8 @@ module.exports = {
       'error',
       {
         selector: 'interface',
-        format: ['PascalCase'],
-        custom: {
-          regex: '.*Interface',
-          match: true,
-        },
-      },
-      {
-        selector: 'typeAlias',
-        format: ['PascalCase'],
-        custom: {
-          regex: '.*Type',
-          match: true,
-        },
+        prefix: ['I'],
+        format: ['UPPER_CASE', 'StrictPascalCase'],
       },
     ],
     '@typescript-eslint/ban-ts-comment': isDevelopment ? 'off' : 'error',
