@@ -25,6 +25,7 @@
 
     "strict": true,
     "strictPropertyInitialization": false,
+    "skipLibCheck": true,
 
     "forceConsistentCasingInFileNames": true,
     "exactOptionalPropertyTypes": true,
@@ -37,7 +38,8 @@
   },
 
   "include": [
-    "./src/**/**/*",
+    "./src/*",
+    "./src/**/*",
     "jest.e2e.config.ts",
     "jest.config.ts"
   ],
