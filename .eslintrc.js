@@ -37,6 +37,7 @@ module.exports = {
     },
   },
   rules: {
+    'no-unused-vars': 'off',
     'no-plusplus': 'off',
     'no-return-await': 'off',
     camelcase: ['error', { properties: 'always' }],
