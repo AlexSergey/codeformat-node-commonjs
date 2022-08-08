@@ -21,10 +21,13 @@
     "format:prettier": "prettier --write \"src/**/*.{ts,json}\"",
     "lint": "npm run lint:ts && npm run lint:code",
     "lint:code": "eslint --ext .ts,.json src/",
+    "lint:commit": "commitlint -e",
     "lint:ts": "tsc --noEmit",
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "eslint": "^8.19.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
