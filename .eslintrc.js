@@ -143,17 +143,32 @@ module.exports = {
     ],
   },
   overrides: [
+    /*
+      <-------------CONFIG RULES------------->
+    */
     {
       files: ['jest.config.ts', 'jest.e2e.config.ts'],
       rules: {
         'import/no-default-export': 'off',
       },
     },
+    /*
+      <-------------JSON RULES------------->
+    */
     {
       files: ['**/**/*.json'],
       rules: {
         '@typescript-eslint/no-unused-expressions': 'off',
         'prettier/prettier': 'off',
+      },
+    },
+    /*
+      <-------------SPEC RULES------------->
+    */
+    {
+      files: ['**/*.spec.ts', '**/*.e2e-spec.ts'],
+      rules: {
+        'jest-formatting/padding-around-all': 'error',
       },
     },
   ],
