@@ -23,6 +23,7 @@
     "lint:code": "eslint --ext .ts,.json src/",
     "lint:commit": "commitlint -e",
     "lint:ts": "tsc --noEmit",
+    "pre-commit": "lint-staged",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -38,8 +39,8 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "eslint-plugin-unicorn": "^43.0.1",
-    "git-is-ready-to-push": "^1.0.0",
     "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.6.2",
     "sort-package-json": "^1.57.0",
     "typescript": "^4.7.4"
