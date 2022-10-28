@@ -16,7 +16,7 @@ module.exports = {
     jest: true,
   },
   ignorePatterns: ['.eslintrc.js', '.eslintrc.cjs'],
-  plugins: ['import', 'unicorn', '@typescript-eslint', 'sort-keys-fix', 'check-file'],
+  plugins: ['import', 'unicorn', '@typescript-eslint', 'sort-keys-fix', 'check-file', 'jest-formatting'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
