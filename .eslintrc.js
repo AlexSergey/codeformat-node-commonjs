@@ -100,12 +100,7 @@ module.exports = {
 
         'sort-keys-fix/sort-keys-fix': 'warn',
 
-        'import/no-extraneous-dependencies': [
-          'error',
-          {
-            devDependencies: ['**/*.test.ts', '**/*.spec.ts', 'jest.*.ts'],
-          },
-        ],
+        'import/no-extraneous-dependencies': 'error',
         'import/order': [
           'error',
           {
@@ -156,6 +151,7 @@ module.exports = {
       files: ['jest.config.ts', 'jest.e2e.config.ts'],
       rules: {
         'import/no-default-export': 'off',
+        'import/no-extraneous-dependencies': 'off',
       },
     },
     /*
@@ -176,6 +172,7 @@ module.exports = {
       files: ['**/*.spec.ts', '**/*.e2e-spec.ts'],
       rules: {
         'jest-formatting/padding-around-all': 'error',
+        'import/no-extraneous-dependencies': 'off',
       },
     },
   ],
