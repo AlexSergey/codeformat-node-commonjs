@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/AlexSergey/codeformat-repo#readme",
+  "homepage": "https://github.com/AlexSergey/codeformat-node-commonjs#readme",
   "bugs": {
-    "url": "https://github.com/AlexSergey/codeformat-repo/issues"
+    "url": "https://github.com/AlexSergey/codeformat-node-commonjs/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlexSergey/codeformat-repo.git"
+    "url": "git+https://github.com/AlexSergey/codeformat-node-commonjs.git"
   },
   "license": "ISC",
   "author": "",
