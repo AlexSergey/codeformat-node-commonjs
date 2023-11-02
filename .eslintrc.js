@@ -43,7 +43,16 @@ module.exports = {
         tsconfigRootDir: __dirname,
         sourceType: 'module',
       },
-      plugins: ['import', 'unicorn', '@typescript-eslint', 'check-file', 'jest-formatting', 'perfectionist', 'regexp'],
+      plugins: [
+        'import',
+        'unicorn',
+        '@typescript-eslint',
+        'check-file',
+        'jest-formatting',
+        'perfectionist',
+        'regexp',
+        'sonarjs',
+      ],
       extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
@@ -56,6 +65,7 @@ module.exports = {
         'plugin:prettier/recommended',
         'plugin:perfectionist/recommended-natural',
         'plugin:regexp/recommended',
+        'plugin:sonarjs/recommended',
       ],
       rules: {
         'no-unused-vars': 'off',
