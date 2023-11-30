@@ -3,13 +3,13 @@
     "baseUrl": "src/",
     "outDir": "./dist/",
 
-    // Node.js 16
+    // Node.js 20
     "lib": [
-      "es2021",
+      "ESNext",
       "dom"
     ],
     "module": "commonjs",
-    "target": "ES2021",
+    "target": "ESNext",
     "moduleResolution": "node",
     "esModuleInterop": true,
 

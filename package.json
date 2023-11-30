@@ -15,6 +15,7 @@
   "author": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc --project ./",
     "format": "npm run format:package && npm run format:prettier && npm run format:code",
     "format:code": "eslint --ext .ts,.json src/ --fix",
     "format:package": "sort-package-json",
@@ -28,31 +29,31 @@
     "test": "echo \"Error: no test specified\""
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.7.2",
-    "@commitlint/config-conventional": "^17.7.0",
-    "@types/node": "^18.18.4",
-    "@typescript-eslint/eslint-plugin": "^6.7.5",
-    "@typescript-eslint/parser": "^6.7.5",
-    "eslint": "^8.51.0",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "eslint": "^8.54.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-check-file": "^2.6.2",
-    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jest-formatting": "^3.1.0",
     "eslint-plugin-json": "^3.1.0",
-    "eslint-plugin-perfectionist": "^2.1.0",
+    "eslint-plugin-perfectionist": "^2.4.2",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-regexp": "^2.1.1",
-    "eslint-plugin-sonarjs": "^0.22.0",
-    "eslint-plugin-unicorn": "^48.0.1",
+    "eslint-plugin-sonarjs": "^0.23.0",
+    "eslint-plugin-unicorn": "^49.0.0",
     "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
-    "prettier": "^3.0.3",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0",
     "sort-package-json": "^2.6.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.2"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   }
 }
