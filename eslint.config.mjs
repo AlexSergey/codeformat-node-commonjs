@@ -9,8 +9,47 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
 import eslintTs from 'typescript-eslint';
 
-const ignores = ['docs/*', 'build/*', 'lib/*', 'dist/*'];
-const tsFiles = ['**/*.{ts,tsx}'];
+const ignores = [
+  '*.d.ts',
+  'node_modules',
+  'logs',
+  '*.log',
+  'lib-cov/',
+  'coverage/',
+  'NO_COMMIT/',
+  'test-reports/**',
+  'docs/*',
+  'build/*',
+  'lib/*',
+  'dist/*',
+  '*.css',
+  '*.scss',
+  '*.less',
+  '*.ico',
+  '*.jpg',
+  '*.jpeg',
+  '*.png',
+  '*.svg',
+  '*.bmp',
+  '*.gif',
+  '*.webp',
+  '*.woff',
+  '*.woff2',
+  '*.txt',
+  '*.mdx',
+  '*.md',
+  '*.json',
+  '*.ejs',
+  '*.hbs',
+  '*.jade',
+  '*.html',
+  'docs/',
+  'public/',
+  'locales/',
+  'src/locales/',
+  'seo_report',
+];
+const tsFiles = ['**/*.ts'];
 
 const defaultEnv = 'production';
 const supportedEnvs = ['development', 'production'];
@@ -69,7 +108,9 @@ const customTypescriptConfig = {
           },
         ],
     '@typescript-eslint/return-await': 'off',
+
     camelcase: ['error', { properties: 'always' }],
+
     'check-file/filename-naming-convention': [
       'error',
       {
@@ -85,10 +126,10 @@ const customTypescriptConfig = {
         'src/**/': 'KEBAB_CASE',
       },
     ],
+
     'class-methods-use-this': 'off',
     'newline-before-return': 'error',
     'no-alert': isDevelopment ? 'off' : 'error',
-
     'no-await-in-loop': 'off',
     'no-console': isDevelopment ? 'off' : 'error',
     'no-debugger': isDevelopment ? 'off' : 'error',
@@ -96,15 +137,14 @@ const customTypescriptConfig = {
     'no-plusplus': 'off',
     'no-return-await': 'off',
     'no-underscore-dangle': 'off',
-
     'no-unused-vars': 'off',
     'no-warning-comments': 'warn',
+
     'unicorn/custom-error-definition': 'error',
     'unicorn/empty-brace-spaces': 'error',
     'unicorn/error-message': 'error',
     'unicorn/no-instanceof-array': 'error',
     'unicorn/prefer-keyboard-event-key': 'error',
-
     'unicorn/prefer-node-protocol': 'error',
     'unicorn/throw-new-error': 'error',
   },
