@@ -3,7 +3,6 @@
     "baseUrl": "src/",
     "outDir": "./dist/",
 
-    // Node.js 20
     "lib": [
       "ESNext",
       "dom"
