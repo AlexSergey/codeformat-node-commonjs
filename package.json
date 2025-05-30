@@ -2,7 +2,6 @@
   "name": "codeformat-node-commonjs",
   "version": "1.0.0",
   "description": "",
-  "keywords": [],
   "homepage": "https://github.com/AlexSergey/codeformat-node-commonjs#readme",
   "bugs": {
     "url": "https://github.com/AlexSergey/codeformat-node-commonjs/issues"
@@ -16,9 +15,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc --project ./",
-    "format": "npm run format:package && npm run format:prettier && npm run format:code",
+    "format": "npm run format:prettier && npm run format:code",
     "format:code": "eslint . --fix",
-    "format:package": "sort-package-json",
     "format:prettier": "prettier --write \"src/**/*.{ts,json}\"",
     "lint": "npm run lint:ts && npm run lint:code",
     "lint:code": "eslint .",
@@ -37,7 +35,7 @@
     "eslint": "^9.9.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-check-file": "^2.8.0",
-    "eslint-plugin-json": "^4.0.1",
+    "eslint-plugin-package-json": "^0.31.0",
     "eslint-plugin-perfectionist": "^4.0.3",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-regexp": "^2.6.0",
@@ -45,7 +43,6 @@
     "husky": "^9.1.5",
     "lint-staged": "^15.2.9",
     "prettier": "^3.3.3",
-    "sort-package-json": "^2.10.1",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.3.0"
   },
